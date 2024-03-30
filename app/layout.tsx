@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { UMIDBClientWrapper } from "@/Contexts/UMIndexedDB/UMIDBClientWrapper";
+import { UMIndexedDBConfig } from "@/Contexts/UMIndexedDB/config";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +28,11 @@ export default function RootLayout({
         <link rel="icon" href="/images/favicon.ico" />
         <meta name="theme-color" content="#E19C3E" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <UMIDBClientWrapper {...UMIndexedDBConfig}>
+          {children}
+        </UMIDBClientWrapper>
+      </body>
     </html>
   );
 }
