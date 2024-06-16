@@ -28,7 +28,7 @@ export default function RootLayout({
         <link rel="icon" href="/images/favicon.ico" />
         <meta name="theme-color" content="#E19C3E" />
       </head>
-      <body className={inter.className}>
+      <body>
         <UMIDBClientWrapper {...UMIndexedDBConfig}>
           {children}
         </UMIDBClientWrapper>
