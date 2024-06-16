@@ -1,0 +1,6 @@
+.appHeader {
+  position: sticky;
+  top: 0;
+
+  max-height: 50px;
+}
