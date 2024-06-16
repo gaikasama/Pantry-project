@@ -1,7 +1,7 @@
 import { ReactNode, createContext, useContext, useState } from "react";
 import { Item, itemsData } from "./data";
 
-// ----- Contetxt -------------------
+// ----- Context -------------------
 type ItemsContextType = {
   items: Item[];
   setItems: (items: Item[]) => void;
