@@ -1,6 +1,6 @@
 "use client";
 import { Button, Card, Flex, SlideupModal, Text } from "@tyanpey/urban_memories_lib";
-import { Item, itemsData } from "./data";
+import { Item, itemsData } from "../../Contexts/ItemsContext/data";
 import { useState } from "react";
 
 export default function ItemsPage() {
