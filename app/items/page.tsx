@@ -24,12 +24,25 @@ export default function ItemsPage() {
     setNewItem("");
   };
 
+  const handleDeleteItem = (itemId: number) => {
+    const updatedItems = items.filter((item) => item.id !== itemId);
+    setItems(updatedItems);
+  };
+
   return (
     <FlexUM direction="v">
       {items.map((item) => {
         return (
           <Card key={item.id}>
-            <TextUM text={item.name} bold />
+            <Flex justify={"between"}>
+              <TextUM text={item.name} bold />
+              <ButtonUM
+                text="Delete Item"
+                mode={"bgGray"}
+                fullWidth={false}
+                onClick={() => handleDeleteItem(item.id)}
+              />
+            </Flex>
           </Card>
         );
       })}
