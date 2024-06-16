@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@radix-ui/themes": "^3.0.5",
-    "@tyanpey/urban_memories_lib": "^0.0.140",
+    "@tyanpey/urban_memories_lib": "^0.0.170",
     "next": "14.1.0",
     "next-pwa": "^5.6.0",
     "react": "^18",
