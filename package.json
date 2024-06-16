@@ -11,6 +11,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@radix-ui/themes": "^3.0.5",
     "@tyanpey/urban_memories_lib": "^0.0.140",
     "next": "14.1.0",
