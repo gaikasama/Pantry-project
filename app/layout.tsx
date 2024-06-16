@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+
+// style sheets
 import "./globals.css";
+import '@radix-ui/themes/styles.css';
+
+// urban memories
 import { UMIDBClientWrapper } from "@/Contexts/UMIndexedDB/UMIDBClientWrapper";
 import { UMIndexedDBConfig } from "@/Contexts/UMIndexedDB/config";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,7 +34,7 @@ export default function RootLayout({
         <link rel="icon" href="/images/favicon.ico" />
         <meta name="theme-color" content="#E19C3E" />
       </head>
-      <body className={inter.className}>
+      <body>
         <UMIDBClientWrapper {...UMIndexedDBConfig}>
           {children}
         </UMIDBClientWrapper>
