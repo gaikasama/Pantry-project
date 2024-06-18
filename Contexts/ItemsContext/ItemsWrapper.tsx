@@ -1,19 +1,22 @@
 import { ReactNode, createContext, useContext, useState } from "react";
-import { Item, itemsData } from "./data";
+import { Item, Stock, itemsData, stocksData } from "./data";
 
 // ----- Context -------------------
 type ItemsContextType = {
   items: Item[];
   setItems: (items: Item[]) => void;
+  stocks: Stock[];
+  setStocks: (stocks: Stock[]) => void;
 };
 const ItemsContext = createContext<ItemsContextType | null>(null);
 
 // ----- Wrapper ---------
 export const ItemsWrapper = ({ children }: { children: ReactNode }) => {
   const [items, setItems] = useState<Item[]>(itemsData);
+  const [stocks, setStocks] = useState<Stock[]>(stocksData);
 
   return (
-    <ItemsContext.Provider value={{ items, setItems }}>
+    <ItemsContext.Provider value={{ items, setItems, stocks, setStocks }}>
       {children}
     </ItemsContext.Provider>
   );
