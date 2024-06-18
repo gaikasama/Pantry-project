@@ -11,6 +11,7 @@ import { UMIDBClientWrapper } from "@/Contexts/UMIndexedDB/UMIDBClientWrapper";
 import { UMIndexedDBConfig } from "@/Contexts/UMIndexedDB/config";
 import { ItemsWrapper } from "@/Contexts/ItemsContext/ItemsWrapper";
 import { AppWrapper } from "@/Components/AppComponents/AppWrapper/AppWrapper";
+import { AppModalWrapper } from "@/Contexts/AppModalContext/AppModalWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,7 +41,9 @@ export default function RootLayout({
       <body>
         <UMIDBClientWrapper {...UMIndexedDBConfig}>
           <ItemsWrapper>
-            <AppWrapper>{children}</AppWrapper>
+            <AppModalWrapper>
+              <AppWrapper>{children}</AppWrapper>
+            </AppModalWrapper>
           </ItemsWrapper>
         </UMIDBClientWrapper>
       </body>
