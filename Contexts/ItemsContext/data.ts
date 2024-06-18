@@ -19,9 +19,10 @@ export type Stock = {
   expiryDate?: Date;
 }
 
+const today = new Date();
 export const stocksData: Stock[] = [
   { id: 1, itemId: 1, expiryDate: new Date() },
-  { id: 2, itemId: 1, expiryDate: new Date(new Date().getDate() + 2) },
+  { id: 2, itemId: 1, expiryDate: new Date(today.setDate(today.getDate() + 2))},
   { id: 3, itemId: 2 },
   { id: 4, itemId: 3 },
   { id: 5, itemId: 3 },
