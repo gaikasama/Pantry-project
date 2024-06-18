@@ -5,6 +5,7 @@ import {
   Button,
   Card,
   Flex,
+  IconText,
   Text,
   useUMColors,
 } from "@tyanpey/urban_memories_lib";
@@ -30,7 +31,8 @@ export const AppHeader = () => {
             {headerPaths.map((path, index) => {
               return (
                 <Link key={index} href={path.href}>
-                  <Text
+                  <IconText
+                    icon={path.icon}
                     text={path.name}
                     bold={pathName == path.href}
                     color={
